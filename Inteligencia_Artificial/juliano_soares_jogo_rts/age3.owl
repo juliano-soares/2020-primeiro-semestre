@@ -1,0 +1,2065 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasCivilizacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasCivilizacao">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isCivilizacao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasEra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasEra"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasRecurso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasRecurso">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isRecurso"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasRecurso"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isTreino"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isCivilizacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isCivilizacao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isEra -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isEra">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isEra"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isRecurso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isRecurso">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isTreino -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#isTreino"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCerco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCerco">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCorpo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCorpo">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dDistancia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dDistancia">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#veloz -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#veloz">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asiatica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asiatica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#defesa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#defesa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasRecurso"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#gerais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#gerais">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#geral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#geral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#construcao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#nativos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#nativos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query01 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query01">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query02 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query02">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasEra"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query03 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query03">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query04 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query04">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasEra"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query05 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query05">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query06 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query06">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasCivilizacao"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civilizacao"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasCivilizacao"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#alema"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query07 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query07">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCerco"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</owl:hasValue>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query08 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query08">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasRecurso"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query09 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query09">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query10 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query10">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#veloz"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query11 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query11">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCerco"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCorpo"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dDistancia"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#veloz"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query12 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query12">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCerco"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dCorpo"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dDistancia"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query13 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query13">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#veloz"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query14 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query14">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query15 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query15">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasRecurso"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query16 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query16">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query17 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query17">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query18 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query18">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#veloz"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vida"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1000</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#dDistancia"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query19 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query19">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query20 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#query20">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasTreino"/>
+                        <owl:hasValue rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#consultas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#hasUnidade"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#unidade"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Aldeão -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Aldeão">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#locais"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Aldeão"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Arma_de_órgão -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Arma_de_órgão">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#portuguesa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">198</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Arqueiro_de_Cavalaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Arqueiro_de_Cavalaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#otomana"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#russa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.75</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">265</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Artilharia_de_Cavalos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Artilharia_de_Cavalos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Besta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Besta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Canhão_Pesado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Canhão_Pesado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fabrica"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Caravela -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Caravela">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Cassador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Cassador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#portuguesa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Cirurgião -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Cirurgião">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Colono -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Colono">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Aldeão"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Cossaco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Cossaco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#russa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.75</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Culverin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Culverin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Dragão -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Dragão">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</dCorpo>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.25</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Enviado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Enviado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#holandesa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Aldeão"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Espião -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Espião">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#locais"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.35</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Explorador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Explorador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#heroi"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Falconet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Falconet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Foguete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Foguete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#britanica"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fabrica"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Fragata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Fragata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Galeão -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Galeão">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Hussar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Hussar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.75</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Imam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Imam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#otomana"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Lancer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Lancer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#espanhola"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Leão -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Leão">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Milícia_colonial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Milícia_colonial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#locais"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#revolucao"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Missionário -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Missionário">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#espanhola"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Monitor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Monitor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Mosqueteiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Mosqueteiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dCorpo>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Oprichnik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Oprichnik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#russa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.75</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Petard_Nitro_Petard -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Petard_Nitro_Petard">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Pikeman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Pikeman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Rifleman_Cherokee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Rifleman_Cherokee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asteca"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#mercado"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">230</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Rinoceronte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Rinoceronte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Rodelero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Rodelero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#espanhola"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">135</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Skirmisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Skirmisher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Strelet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Strelet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#russa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_Colono -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_Colono">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#alema"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#moinho"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_coberto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_coberto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_de_fábrica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_de_fábrica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#ouro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_de_guerra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Vagão_de_guerra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#alema"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Yojimbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#Yojimbo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#japonesa"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.8</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#alema -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#alema">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#argamassa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#argamassa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#exercito"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#arsenal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#arsenal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#artilharia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asteca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asteca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#nativos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#banco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#banco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#bode -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#bode">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#britanica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#britanica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#capitolio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#capitolio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#gerais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#casa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#casa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cavalaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cervo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#cervo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#chinesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#chinesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asiatica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#curral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#curral">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#gerais"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#docas"/>
+        <hasUnidade rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.5</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#espanhola -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#espanhola">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#estabulo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#geral"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#descoberta"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#centro_urbano"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fabrica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fabrica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#feitorias -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#feitorias">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#gerais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fortaleza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#forte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#defesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#framboesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#framboesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#francesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#francesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#fundicao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#heroi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#heroi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#holandesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#holandesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#gerais"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#imperial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#imperial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#indiana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#indiana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asiatica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#industrial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#infantaria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#iroquesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#iroquesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#nativos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#japonesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#japonesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#asiatica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#llama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#llama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#lobo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#lobo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#locais -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#locais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#geral"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#madeira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#madeira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#madeira"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#mercado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#mercado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#moinho -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#moinho">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#muralha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#muralha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#defesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#naval">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#tipo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#otomana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#otomana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#ouro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#ouro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#ouro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#ovelha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#ovelha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#peixe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#peixe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#plantacao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#plantacao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#economia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#portao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#portao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#defesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#portuguesa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#portuguesa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#quartel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#revolucao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#revolucao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#era"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#russa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#russa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#sarcedote -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#sarcedote">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#civil"/>
+        <hasCivilizacao rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#europeia"/>
+        <hasEra rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#colonial"/>
+        <hasTreino rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#igreja"/>
+        <dCerco rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dCerco>
+        <dCorpo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dCorpo>
+        <dDistancia rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</dDistancia>
+        <veloz rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</veloz>
+        <vida rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</vida>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#sioux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#sioux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#nativos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#taverna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#taverna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#militar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#torre_de_guerra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#torre_de_guerra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#defesa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vaca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#vaca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#recurso"/>
+        <hasRecurso rdf:resource="http://www.semanticweb.org/juliano/ontologies/2020/3/untitled-ontology-7#comida"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
