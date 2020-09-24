@@ -11,7 +11,7 @@ rodar o quinto.l:
 - isto usará o arquivo exemplo
 > mas caso queira mudar troque o "exemplo.c" pelo que desejar.
 
-## Possvel erro falta de biblioteca:
+## Possivel erro falta de biblioteca:
 Ubuntu:
 > sudo apt install flex
 > sudo apt install gcc
