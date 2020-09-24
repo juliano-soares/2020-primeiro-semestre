@@ -1,0 +1,7 @@
+(a|b)*|c
+(b|$)aa(b*|c)
+b+a+ca+b+
+abc*ba
+ba(ab|ba|$)ab
+(a+b|(ba|bb))*
+a(a|b)*b*
