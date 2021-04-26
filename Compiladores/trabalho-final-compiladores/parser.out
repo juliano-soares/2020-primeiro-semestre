@@ -1,0 +1,365 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> re
+Rule 1     re -> or
+Rule 2     re -> re_simple
+Rule 3     or -> re OR re_simple
+Rule 4     re_simple -> re_simple re_base
+Rule 5     re_simple -> re_base
+Rule 6     re_base -> star
+Rule 7     re_base -> plus
+Rule 8     re_base -> paren
+Rule 9     re_base -> CHAR
+Rule 10    re_base -> VOID
+Rule 11    star -> paren STAR
+Rule 12    star -> CHAR STAR
+Rule 13    plus -> paren PLUS
+Rule 14    plus -> CHAR PLUS
+Rule 15    paren -> LPAREN re RPAREN
+
+Terminals, with rules where they appear
+
+CHAR                 : 9 12 14
+LPAREN               : 15
+OR                   : 3
+PLUS                 : 13 14
+RPAREN               : 15
+STAR                 : 11 12
+VOID                 : 10
+error                : 
+
+Nonterminals, with rules where they appear
+
+or                   : 1
+paren                : 8 11 13
+plus                 : 7
+re                   : 3 15 0
+re_base              : 4 5
+re_simple            : 2 3 4
+star                 : 6
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . re
+    (1) re -> . or
+    (2) re -> . re_simple
+    (3) or -> . re OR re_simple
+    (4) re_simple -> . re_simple re_base
+    (5) re_simple -> . re_base
+    (6) re_base -> . star
+    (7) re_base -> . plus
+    (8) re_base -> . paren
+    (9) re_base -> . CHAR
+    (10) re_base -> . VOID
+    (11) star -> . paren STAR
+    (12) star -> . CHAR STAR
+    (13) plus -> . paren PLUS
+    (14) plus -> . CHAR PLUS
+    (15) paren -> . LPAREN re RPAREN
+
+    CHAR            shift and go to state 8
+    VOID            shift and go to state 9
+    LPAREN          shift and go to state 10
+
+    re                             shift and go to state 1
+    or                             shift and go to state 2
+    re_simple                      shift and go to state 3
+    re_base                        shift and go to state 4
+    star                           shift and go to state 5
+    plus                           shift and go to state 6
+    paren                          shift and go to state 7
+
+state 1
+
+    (0) S' -> re .
+    (3) or -> re . OR re_simple
+
+    OR              shift and go to state 11
+
+
+state 2
+
+    (1) re -> or .
+
+    OR              reduce using rule 1 (re -> or .)
+    $end            reduce using rule 1 (re -> or .)
+    RPAREN          reduce using rule 1 (re -> or .)
+
+
+state 3
+
+    (2) re -> re_simple .
+    (4) re_simple -> re_simple . re_base
+    (6) re_base -> . star
+    (7) re_base -> . plus
+    (8) re_base -> . paren
+    (9) re_base -> . CHAR
+    (10) re_base -> . VOID
+    (11) star -> . paren STAR
+    (12) star -> . CHAR STAR
+    (13) plus -> . paren PLUS
+    (14) plus -> . CHAR PLUS
+    (15) paren -> . LPAREN re RPAREN
+
+    OR              reduce using rule 2 (re -> re_simple .)
+    $end            reduce using rule 2 (re -> re_simple .)
+    RPAREN          reduce using rule 2 (re -> re_simple .)
+    CHAR            shift and go to state 8
+    VOID            shift and go to state 9
+    LPAREN          shift and go to state 10
+
+    re_base                        shift and go to state 12
+    star                           shift and go to state 5
+    plus                           shift and go to state 6
+    paren                          shift and go to state 7
+
+state 4
+
+    (5) re_simple -> re_base .
+
+    CHAR            reduce using rule 5 (re_simple -> re_base .)
+    VOID            reduce using rule 5 (re_simple -> re_base .)
+    LPAREN          reduce using rule 5 (re_simple -> re_base .)
+    OR              reduce using rule 5 (re_simple -> re_base .)
+    $end            reduce using rule 5 (re_simple -> re_base .)
+    RPAREN          reduce using rule 5 (re_simple -> re_base .)
+
+
+state 5
+
+    (6) re_base -> star .
+
+    CHAR            reduce using rule 6 (re_base -> star .)
+    VOID            reduce using rule 6 (re_base -> star .)
+    LPAREN          reduce using rule 6 (re_base -> star .)
+    OR              reduce using rule 6 (re_base -> star .)
+    $end            reduce using rule 6 (re_base -> star .)
+    RPAREN          reduce using rule 6 (re_base -> star .)
+
+
+state 6
+
+    (7) re_base -> plus .
+
+    CHAR            reduce using rule 7 (re_base -> plus .)
+    VOID            reduce using rule 7 (re_base -> plus .)
+    LPAREN          reduce using rule 7 (re_base -> plus .)
+    OR              reduce using rule 7 (re_base -> plus .)
+    $end            reduce using rule 7 (re_base -> plus .)
+    RPAREN          reduce using rule 7 (re_base -> plus .)
+
+
+state 7
+
+    (8) re_base -> paren .
+    (11) star -> paren . STAR
+    (13) plus -> paren . PLUS
+
+    CHAR            reduce using rule 8 (re_base -> paren .)
+    VOID            reduce using rule 8 (re_base -> paren .)
+    LPAREN          reduce using rule 8 (re_base -> paren .)
+    OR              reduce using rule 8 (re_base -> paren .)
+    $end            reduce using rule 8 (re_base -> paren .)
+    RPAREN          reduce using rule 8 (re_base -> paren .)
+    STAR            shift and go to state 13
+    PLUS            shift and go to state 14
+
+
+state 8
+
+    (9) re_base -> CHAR .
+    (12) star -> CHAR . STAR
+    (14) plus -> CHAR . PLUS
+
+    CHAR            reduce using rule 9 (re_base -> CHAR .)
+    VOID            reduce using rule 9 (re_base -> CHAR .)
+    LPAREN          reduce using rule 9 (re_base -> CHAR .)
+    OR              reduce using rule 9 (re_base -> CHAR .)
+    $end            reduce using rule 9 (re_base -> CHAR .)
+    RPAREN          reduce using rule 9 (re_base -> CHAR .)
+    STAR            shift and go to state 15
+    PLUS            shift and go to state 16
+
+
+state 9
+
+    (10) re_base -> VOID .
+
+    CHAR            reduce using rule 10 (re_base -> VOID .)
+    VOID            reduce using rule 10 (re_base -> VOID .)
+    LPAREN          reduce using rule 10 (re_base -> VOID .)
+    OR              reduce using rule 10 (re_base -> VOID .)
+    $end            reduce using rule 10 (re_base -> VOID .)
+    RPAREN          reduce using rule 10 (re_base -> VOID .)
+
+
+state 10
+
+    (15) paren -> LPAREN . re RPAREN
+    (1) re -> . or
+    (2) re -> . re_simple
+    (3) or -> . re OR re_simple
+    (4) re_simple -> . re_simple re_base
+    (5) re_simple -> . re_base
+    (6) re_base -> . star
+    (7) re_base -> . plus
+    (8) re_base -> . paren
+    (9) re_base -> . CHAR
+    (10) re_base -> . VOID
+    (11) star -> . paren STAR
+    (12) star -> . CHAR STAR
+    (13) plus -> . paren PLUS
+    (14) plus -> . CHAR PLUS
+    (15) paren -> . LPAREN re RPAREN
+
+    CHAR            shift and go to state 8
+    VOID            shift and go to state 9
+    LPAREN          shift and go to state 10
+
+    re                             shift and go to state 17
+    or                             shift and go to state 2
+    re_simple                      shift and go to state 3
+    re_base                        shift and go to state 4
+    star                           shift and go to state 5
+    plus                           shift and go to state 6
+    paren                          shift and go to state 7
+
+state 11
+
+    (3) or -> re OR . re_simple
+    (4) re_simple -> . re_simple re_base
+    (5) re_simple -> . re_base
+    (6) re_base -> . star
+    (7) re_base -> . plus
+    (8) re_base -> . paren
+    (9) re_base -> . CHAR
+    (10) re_base -> . VOID
+    (11) star -> . paren STAR
+    (12) star -> . CHAR STAR
+    (13) plus -> . paren PLUS
+    (14) plus -> . CHAR PLUS
+    (15) paren -> . LPAREN re RPAREN
+
+    CHAR            shift and go to state 8
+    VOID            shift and go to state 9
+    LPAREN          shift and go to state 10
+
+    re_simple                      shift and go to state 18
+    re_base                        shift and go to state 4
+    star                           shift and go to state 5
+    plus                           shift and go to state 6
+    paren                          shift and go to state 7
+
+state 12
+
+    (4) re_simple -> re_simple re_base .
+
+    CHAR            reduce using rule 4 (re_simple -> re_simple re_base .)
+    VOID            reduce using rule 4 (re_simple -> re_simple re_base .)
+    LPAREN          reduce using rule 4 (re_simple -> re_simple re_base .)
+    OR              reduce using rule 4 (re_simple -> re_simple re_base .)
+    $end            reduce using rule 4 (re_simple -> re_simple re_base .)
+    RPAREN          reduce using rule 4 (re_simple -> re_simple re_base .)
+
+
+state 13
+
+    (11) star -> paren STAR .
+
+    CHAR            reduce using rule 11 (star -> paren STAR .)
+    VOID            reduce using rule 11 (star -> paren STAR .)
+    LPAREN          reduce using rule 11 (star -> paren STAR .)
+    OR              reduce using rule 11 (star -> paren STAR .)
+    $end            reduce using rule 11 (star -> paren STAR .)
+    RPAREN          reduce using rule 11 (star -> paren STAR .)
+
+
+state 14
+
+    (13) plus -> paren PLUS .
+
+    CHAR            reduce using rule 13 (plus -> paren PLUS .)
+    VOID            reduce using rule 13 (plus -> paren PLUS .)
+    LPAREN          reduce using rule 13 (plus -> paren PLUS .)
+    OR              reduce using rule 13 (plus -> paren PLUS .)
+    $end            reduce using rule 13 (plus -> paren PLUS .)
+    RPAREN          reduce using rule 13 (plus -> paren PLUS .)
+
+
+state 15
+
+    (12) star -> CHAR STAR .
+
+    CHAR            reduce using rule 12 (star -> CHAR STAR .)
+    VOID            reduce using rule 12 (star -> CHAR STAR .)
+    LPAREN          reduce using rule 12 (star -> CHAR STAR .)
+    OR              reduce using rule 12 (star -> CHAR STAR .)
+    $end            reduce using rule 12 (star -> CHAR STAR .)
+    RPAREN          reduce using rule 12 (star -> CHAR STAR .)
+
+
+state 16
+
+    (14) plus -> CHAR PLUS .
+
+    CHAR            reduce using rule 14 (plus -> CHAR PLUS .)
+    VOID            reduce using rule 14 (plus -> CHAR PLUS .)
+    LPAREN          reduce using rule 14 (plus -> CHAR PLUS .)
+    OR              reduce using rule 14 (plus -> CHAR PLUS .)
+    $end            reduce using rule 14 (plus -> CHAR PLUS .)
+    RPAREN          reduce using rule 14 (plus -> CHAR PLUS .)
+
+
+state 17
+
+    (15) paren -> LPAREN re . RPAREN
+    (3) or -> re . OR re_simple
+
+    RPAREN          shift and go to state 19
+    OR              shift and go to state 11
+
+
+state 18
+
+    (3) or -> re OR re_simple .
+    (4) re_simple -> re_simple . re_base
+    (6) re_base -> . star
+    (7) re_base -> . plus
+    (8) re_base -> . paren
+    (9) re_base -> . CHAR
+    (10) re_base -> . VOID
+    (11) star -> . paren STAR
+    (12) star -> . CHAR STAR
+    (13) plus -> . paren PLUS
+    (14) plus -> . CHAR PLUS
+    (15) paren -> . LPAREN re RPAREN
+
+    OR              reduce using rule 3 (or -> re OR re_simple .)
+    $end            reduce using rule 3 (or -> re OR re_simple .)
+    RPAREN          reduce using rule 3 (or -> re OR re_simple .)
+    CHAR            shift and go to state 8
+    VOID            shift and go to state 9
+    LPAREN          shift and go to state 10
+
+    re_base                        shift and go to state 12
+    star                           shift and go to state 5
+    plus                           shift and go to state 6
+    paren                          shift and go to state 7
+
+state 19
+
+    (15) paren -> LPAREN re RPAREN .
+
+    STAR            reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    PLUS            reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    CHAR            reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    VOID            reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    LPAREN          reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    OR              reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    $end            reduce using rule 15 (paren -> LPAREN re RPAREN .)
+    RPAREN          reduce using rule 15 (paren -> LPAREN re RPAREN .)
+
